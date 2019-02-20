@@ -1,0 +1,28 @@
+{
+  "name": "arithmetic-js",
+  "version": "1.0.0",
+  "description": "> 每周最少一更 At least once a week",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HQ-Lin/arithmetic-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HQ-Lin/arithmetic-js/issues"
+  },
+  "homepage": "https://github.com/HQ-Lin/arithmetic-js#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.6",
+    "@types/node": "^11.9.4",
+    "jest": "^24.1.0",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.3"
+  }
+}
