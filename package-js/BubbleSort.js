@@ -8,6 +8,7 @@
  * 3.就像冒泡一样，从最底层开始冒泡一开始泡泡特别多，到最后气泡越来越少
  *
  */
+Object.defineProperty(exports, "__esModule", { value: true });
 function BubbleSort(list) {
     const len = list.length;
     for (let j = 1; j < len; j++) {
@@ -21,3 +22,4 @@ function BubbleSort(list) {
     }
     return list;
 }
+exports.default = BubbleSort;
