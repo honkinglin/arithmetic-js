@@ -1,4 +1,3 @@
-"use strict";
 /**
  * @name 冒泡排序
  *
@@ -12,8 +11,7 @@
  * 3.就像冒泡一样，从最底层开始冒泡一开始泡泡特别多，到最后气泡越来越少
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-function BubbleSort(list) {
+export default function BubbleSort(list) {
     const len = list.length;
     for (let j = 1; j < len; j++) {
         for (let i = 0; i < len - j; i++) {
@@ -26,4 +24,3 @@ function BubbleSort(list) {
     }
     return list;
 }
-exports.default = BubbleSort;

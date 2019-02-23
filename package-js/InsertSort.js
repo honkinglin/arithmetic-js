@@ -1,4 +1,3 @@
-"use strict";
 /**
  * @name 插入排序
  *
@@ -15,8 +14,7 @@
  * 6.重复步骤2~5
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-function InsertSort(list) {
+export default function InsertSort(list) {
     for (let i = 1; i < list.length; i++) {
         if (list[i - 1] > list[i]) {
             let temp = list[i];
@@ -30,4 +28,3 @@ function InsertSort(list) {
     }
     return list;
 }
-exports.default = InsertSort;

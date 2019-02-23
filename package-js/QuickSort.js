@@ -1,4 +1,3 @@
-"use strict";
 /**
  * @name 快速排序
  *
@@ -13,8 +12,7 @@
  * 3.对”基准”左边和右边的两个子集，不断重复第一步和第二步，直到所有子集只剩下一个元素为止。
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-function QuickSort(list) {
+export default function QuickSort(list) {
     if (list.length <= 1)
         return list;
     const left = [];
@@ -26,4 +24,3 @@ function QuickSort(list) {
     }
     return QuickSort(left).concat([pivot], QuickSort(right));
 }
-exports.default = QuickSort;
