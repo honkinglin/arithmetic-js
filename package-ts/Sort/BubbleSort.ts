@@ -13,7 +13,7 @@
  */
 
 export default function BubbleSort(list: Array<number>): Array<number> {
-    const len = list.length;
+    const len: number = list.length;
     for (let j:number = 1; j < len; j++) {
         for (let i:number = 0; i < len - j; i++) {
             if (list[i] > list[i + 1]) {
