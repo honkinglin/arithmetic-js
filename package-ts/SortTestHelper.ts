@@ -8,13 +8,39 @@
 export function generateRandomArray(n: number, rangeL: number, rangeR: number): Array<number> {
     if (rangeL > rangeR) throw new Error('rangeR has to be bigger than rangeL');
 
-    const arr: Array<number> = [];
+    const list: Array<number> = [];
 
     for (let i: number = 0; i < n; i++) {
-        arr[i] = Math.round(Math.random() * (rangeR - rangeL) + rangeL);
+        list[i] = Math.round(Math.random() * (rangeR - rangeL) + rangeL);
     }
 
-    return arr;
+    return list;
+}
+
+
+/**
+ * @description 生成一个 n 个元素的近乎有序数组
+ * @export
+ * @param {number} n
+ * @param {number} swapTimes 乱序个数
+ * @returns 
+ */
+export function generateNearlyOrderArray(n: number, swapTimes: number) {
+    const list: number[] = [];
+
+    for (let i: number = 0; i < n; i++) {
+        list[i] = i;
+    }
+
+    for (let j: number = 0; j < swapTimes; j++) {
+        const posx = Math.round(Math.random() * n);
+        const posy = Math.round(Math.random() * n);
+        const temp = list[posx];
+        list[posx] = list[posy];
+        list[posy] = temp;
+    }
+
+    return list;
 }
 
 /**

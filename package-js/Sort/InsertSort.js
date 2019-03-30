@@ -14,12 +14,13 @@
  * 6. 重复步骤2~5
  *
  */
-export default function InsertSort(list) {
-    for (let i = 1; i < list.length; i++) {
+export default function InsertSort(list, l = 0, r) {
+    const right = r || list.length - 1;
+    for (let i = l + 1; i <= right; i++) {
         if (list[i - 1] > list[i]) {
             let temp = list[i];
             let j = i;
-            while (j > 0 && list[j - 1] > temp) {
+            while (j > l && list[j - 1] > temp) {
                 list[j] = list[j - 1];
                 j--;
             }

@@ -15,12 +15,13 @@
  * 
  */
 
-export default function InsertSort(list: Array<number>): Array<number> {
-    for (let i:number = 1; i < list.length; i++) {
+export default function InsertSort(list: Array<number>, l: number = 0, r: number): Array<number> {
+    const right = r || list.length - 1;
+    for (let i:number = l + 1; i <= right; i++) {
         if (list[i - 1] > list[i]) {
             let temp:number = list[i];
             let j:number = i;
-            while (j > 0 && list[j - 1] > temp) {
+            while (j > l && list[j - 1] > temp) {
                 list[j] = list[j - 1];
                 j--;
             }
